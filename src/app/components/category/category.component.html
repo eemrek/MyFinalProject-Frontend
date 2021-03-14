@@ -2,7 +2,7 @@
   <span class="visually-hidden">Loading...</span>
 </div>
 <ul class="list-group">
-    <li [class]="getAllCategoryClass()" routerLink = "/products">Tüm ürünler</li>
+    <li [class]="getAllCategoryClass()" (click)="setAllCategory()" routerLink = "/products">Tüm ürünler</li>
     <li  (click)="setCurrentCategory(category)" 
     routerLink = "/products/category/{{category.categoryId}}"
     *ngFor="let category of categories" 
